@@ -1,0 +1,7 @@
+1st iteration
+I downloaded the example code and played around with it. At first, the servo didn’t move. So I wrote a simple code that only powered the servo to test if it was a hardware issue. Turned out the servo was fine — I had just wired it wrong. After fixing that, the servo worked, but since the time interval was so short, the servo kept shaking. I increased the time interval, and now it works.
+
+2nd iteration
+In this setup, the servo always tends to go back to the same position. When the light isn’t strong enough, the LED turns on, and the servo holds its position.
+I added an LED on pin D2 that turns on when the LDR reading is low.
+The servo was constantly jittering because the LDR readings fluctuated slightly. I fixed this by adding a threshold system — the servo only moves when the LDR value changes by more than 10 units. This eliminated the jitter while keeping it responsive to real light changes.
